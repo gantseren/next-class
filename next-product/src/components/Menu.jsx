@@ -26,7 +26,7 @@ function Menu() {
             <Nav.Link href="#action2">Link</Nav.Link>
             <NavDropdown title="Categories" id="navbarScrollingDropdown">
               {categories.map((category, index) => (
-                <NavDropdown.Item as={Link} key={index} href={`/category/${category.toLowerCase()}`}>
+                <NavDropdown.Item as={Link} key={index} href={`products/category/${category.toLowerCase()}`}>
                   {category}
                 </NavDropdown.Item>
               ))}

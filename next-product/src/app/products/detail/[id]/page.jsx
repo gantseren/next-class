@@ -1,4 +1,4 @@
-
+import "bootstrap/dist/css/bootstrap.min.css"
 
 export default async function ProductDetail({ params }) {
   const { id } = params;

@@ -2,7 +2,7 @@ import Link from "next/link"
 export default function ProductCard({ product }) {
   return (
     <div className='max-w-xs bg-white max-h-[550px] border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700'>
-      <Link href={`/products/${product.id}`}>
+      <Link href={`/products/detail/${product.id}`}>
         <img
           className='rounded-t-lg w-full h-[260px]'
           src={product.image}
@@ -21,7 +21,7 @@ export default function ProductCard({ product }) {
         </p>
         <div className='flex'>
           <Link
-            href={`/products/${product.id}`}
+            href={`/products/detail/${product.id}`}
             className='inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-violet-700 rounded-lg hover:bg-dark-blue focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
           >
             Detail
