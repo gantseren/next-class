@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css"
   import ProductCard from "@/components/ProductCard";
 
   export default async function CategoryOfProducts({ params }) {
