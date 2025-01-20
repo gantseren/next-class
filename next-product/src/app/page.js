@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Button from "react-bootstrap/Button"
 import Link from "next/link"
 import GoSlider from "@/components/GoSlider"
+import Cart from "@/components/Cart"
 
 export default async function Home() {
   const products = await getProducts()
@@ -23,20 +24,15 @@ export default async function Home() {
               </div>
             ))}
           </div>
-          <Button as={Link} href={`/products/page/2`}>
-          view more
-          </Button>
-        </div>
-        <div className='w-1/2'>
-          <div className='text-center mt-4 border border-solid '>
-            <Button
-              className='w-full'
-              as={Link}
-              href={`/cart`}
-              variant='secondary'
-            >
-              Cart
+          <div className='w-full flex justify-center m-4'>
+            <Button as={Link} href={`/products/page/2`}>
+              view more
             </Button>
+          </div>
+        </div>
+        <div className='w-1/4'>
+          <div className='text-center mt-4 border border-solid '>
+            <Cart />
           </div>
         </div>
       </div>
