@@ -3,7 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Button from "react-bootstrap/Button"
 import Link from "next/link"
 import GoSlider from "@/components/GoSlider"
-import Cart from "@/components/Cart"
+import Cart from "@/storage/Cart"
+
 
 export default async function Home() {
   const products = await getProducts()
