@@ -7,6 +7,7 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import Dropdown from "react-bootstrap/Dropdown";  // Add this import
 
 function Menu() {
   const [categories, setCategories] = useState([]);
@@ -28,7 +29,7 @@ function Menu() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link as={Link} href="/products/home"></Nav.Link>
+            <Nav.Link as={Link} href="/products/home">Home</Nav.Link> {/* Add text or destination here */}
             <Nav.Link href="#action2">Link</Nav.Link>
             <NavDropdown title="Categories" id="navbarScrollingDropdown">
               {categories.map((category, index) => (
@@ -58,7 +59,16 @@ function Menu() {
             />
             <Button variant="outline-success">Search</Button>
           </Form>
-          <Button as={Link} href={`/registration`} variant="success" className="m-2" >Login</Button>
+          <Dropdown>
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+              Login
+            </Dropdown.Toggle>
+
+            <Dropdown.Menu>
+              <Dropdown.Item as={Link} href={`/login`}>Login</Dropdown.Item>
+              <Dropdown.Item as={Link} href={`/register`}>Register</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </Navbar.Collapse>
       </Container>
     </Navbar>
