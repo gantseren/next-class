@@ -8,7 +8,7 @@ export default async function Home() {
     <div className=''>
       <div>
         <div>
-          <SimpleSlider products={products}/>
+          <SimpleSlider products={products} />
         </div>
         <div>
           <div className='grid grid-cols-5 gap-1  '>
@@ -34,7 +34,7 @@ async function getProducts() {
   const res = await fetch(`https://fakestoreapi.com/products?limit=4`)
 
   if (!res.ok) {
-    console.log("error")
+    alert("error")
   }
 
   return res.json()
