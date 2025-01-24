@@ -12,7 +12,6 @@ export default function Register() {
   const handelSubmit = (e) => {
     e.preventDefault();
 
-    console.log("username", username, "password", password);
 
     fetch("https://fakestoreapi.com/auth/login", {
       method: "POST",
@@ -26,7 +25,6 @@ export default function Register() {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data, "data");
 
         if (data.token) {
           Cookies.set("username", username, { expires: 7 });
@@ -38,7 +36,6 @@ export default function Register() {
         }
       })
       .catch((error) => {
-        console.error("Error logging in: ", error);
         alert("An error occurred while logging in. Please try again later.");
       });
   };
