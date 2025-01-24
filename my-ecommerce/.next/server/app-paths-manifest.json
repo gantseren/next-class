@@ -1,0 +1,10 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/products/detail/[id]/page": "app/products/detail/[id]/page.js",
+  "/products/category/[category]/page": "app/products/category/[category]/page.js",
+  "/products/page/[page]/page": "app/products/page/[page]/page.js",
+  "/page": "app/page.js",
+  "/singer/login/page": "app/singer/login/page.js",
+  "/singer/register/page": "app/singer/register/page.js"
+}
