@@ -1,18 +1,9 @@
 import Card from "react-bootstrap/Card"
 import ListGroup from "react-bootstrap/ListGroup"
-import { useQuery } from "@apollo/client"
-import { GET_POSTS } from "@/app/graphql/queries"
 
-export default function BlogPosts() {
-  const { data, loading, error } = useQuery(GET_POSTS)
-
-  if (loading) return <p>Loading...</p>
-  if (error) return <p>Error {error.message} </p>
-
-  console.log(data)
-
+export default function BlogPosts({ data }) {
   return (
-    <div>
+    <>
       {data.posts.map((post) => (
         <Card key={post.id} style={{ width: "18rem" }}>
           <Card.Img variant='top' src={post.coverImage.url} alt={post.title} />
@@ -32,6 +23,6 @@ export default function BlogPosts() {
           </Card.Body>
         </Card>
       ))}
-    </div>
+    </>
   )
 }

@@ -21,7 +21,7 @@ export const GET_POSTS = gql`
         url
         size
       }
-    }
+    } 
   }
 `
 
@@ -34,8 +34,23 @@ export const GET_POST = gql`
         size
         url
       }
+      content {
+        text
+      }
       slug
       excerpt
+    }
+  }
+`
+
+export const GET_AUTHORS = gql`
+  query Authors {
+    authors {
+      name
+      title
+      biography
+      updatedAt
+      id
     }
   }
 `

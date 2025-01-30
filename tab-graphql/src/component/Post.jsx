@@ -19,22 +19,15 @@ function Post({ id }) {
   }
 
   return (
-    <div>
-      <>
-        <Card>
-          <Card.Img variant='top' src={data.post.coverImage.url} />
-          <Card.Body>
-            <Card.Text>{data.post.title}</Card.Text>
-          </Card.Body>
-        </Card>
-        <br />
-        <Card>
-          <Card.Body>
-            <Card.Text>{data.post.excerpt}</Card.Text>
-          </Card.Body>
-          <Card.Img variant='bottom' src='holder.js/100px180' />
-        </Card>
-      </>
+    <div className='grid grid-cols-2 gap-2 '>
+      <Card className='space-y-4'>
+        <Card.Img variant='top' src={data.post.coverImage.url} />
+        <Card.Body>
+          <Card.Text>{data.post.title}</Card.Text>
+          <Card.Text>{data.post.content.text}</Card.Text>
+          <Button variant='primary'>Primary</Button>
+        </Card.Body>
+      </Card>
     </div>
   )
 }
