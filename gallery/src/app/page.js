@@ -1,24 +1,13 @@
-"use client"
-import { images } from "../data/ImagesData";  
-import Image from "next/image";
-import Link from "next/link";
+"use client";
+import ImageCard from "../components/ImageCard";
+import { images } from "../data/ImagesData";
 
 export default function Home() {
   return (
-    <div className="max-w-8xl flex justify-center items-center mx-auto">
-      <div className="gallery grid grid-cols-3 gap-4 p-4">
+    <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="grid gap-6 p-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {images.map((image) => (
-          <div key={image.id} className="photo">
-            <Link href={`/photo/${image.id}`}> 
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  width={600}
-                  height={600}
-                  className="transition-transform transform hover:scale-105"
-                />
-            </Link>
-          </div>
+          <ImageCard key={image.id} image={image} />
         ))}
       </div>
     </div>
